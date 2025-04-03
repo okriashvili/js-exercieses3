@@ -1,40 +1,94 @@
 //ფესვის ამოყვანა ხდება Math.sqrt(n1, n2)
 // n1- ფიცრი და n2 ფესვის მაჩვენებელი  
-var n = 3
-console.log(n = Math.sqrt(n, 4))
+var n = 3;
+console.log(n = Math.sqrt(n, 4));
 
 
 // toFixed(n) ით ხდება დარგვალება ციფრის, 
 // nში უწერ რომელ ციფრამდე გინდა დამრგვალგეს მაგალითად- 
 // - 3,245 tofixed(2) ით დამრგვალდება მეორე ციფრამდე, (-აქ გაწერილი ციფრი აღნიშნვს რომელ ციფრამდეც უნდა დამრგვალდეს)
 // ასევე დამრგვალებისას თუ ბოლოში დასამრგვალებელი ციფრის წინ წერია 5 ან 5ზე მეტი, ის მას შემდეგ რიცხამვდე დაამრგვალებს
-var n = 3.245
-console.log(n.toFixed(2))
+var n = 3.245;
+console.log(n.toFixed(2));
 
 
 // math.round - ასევე ამრგვალებს მთელ ციფრებამდე, მას არავითარი არგუმენტი არ ენიჭება
 // 5 ან 5 ზე მეტზე თუ უეწერია წინა ციფრი ამრგავლებს შემდეგ ციფრამდე, 
 // თუ 5ზე ნაკლებია თოვებს წინა ციფრს
-var x = Math.round(2.5)
-console.log(x)
+var x = Math.round(2.5);
+console.log(x);
 
 
 // math.floor - ამრგვლებს მთელ ციფრებამდე ნაკლებობით 
 // მაგ: 2.5 დამრგვალდება 2მდე, აგრეთვე 2.9 დამრგვალდება 2 მდე,
 // floor ამრგვალებს ციფრებამდე წინა რიცხვებამდე
-var y = Math.floor(2.8)
-console.log(y)
-
+var y = Math.floor(2.8);
+console.log(y);
 
 // math.ceil ამრგალებს მეტობით
 // ისევე მუშაობს როგორც "floor" აგრამ როგორც კი მცირედითაც გადაცდება მთელ რიცხვა, ათწილადს დაამრგვალებს შემდდეგ მთელ ციფრამდე
-var m = Math.ceil(3.2)
-console.log(m)
+var m = Math.ceil(3.2);
+console.log(m);
 
 
 // ROUND, FLOOR, CEIL - ამრგვალებს რიოცხვებს მთელ ციფრემბამდე ხოლო 
 // toFixed - ამრგვალებს ციფრებს იმ ციფრამდე რომელსაც გავუწერთ
 
+
 // abs - უარყფით ციფრს აქცევს დადებით ციფრად, ხოლო დადებითს ისევ დადებითად ტოვებს
-let h = Math.abs(-200)
-console.log(h)
+let h = Math.abs(-200);
+console.log(h);
+// აქ მორჩა მათეატიკური ნაწილი
+
+
+
+// სტრინგებზე გადავიდეთ
+
+var g = "hello world";
+console.log(g.startsWith("hell"), g.charAt(4), g.toUpperCase());
+
+
+
+
+
+
+// კალკილატორი
+var number1 = Number(window.prompt("შეიყანეთ პირველი ციფრი"));
+var number2 = Number(window.prompt("შეიყვანეთ მეორე ციფრი"));
+var operation = window.prompt("აირჩიეთ ოპერაციის ნიშანი");
+if(operation == '+'){
+    window.alert(number1 + number2)
+}else if(operation == '-'){
+    window.alert(number1 - number2)
+}else if(operation == '/'){
+    window.alert(number1 / number2)
+}else if(operation == '*'){
+    window.alert(number1 * number2)
+}
+
+
+// switch მაგალითები
+// switchში switch ის შედეგ ვწერთ მონაცემის სახელს რომლის დათარგეთებაც გვინდა, შემდგომ კლაკნილი ბრჭყალებს ვხსნით{}
+// ვწერთ რამდენი შემთხვევას, case- ით ვხსნით და ვწერთ ნომაცემს, მის სემდეგ იწერება :ორი წერტილი, შემდეგომ ხაზზე ვწერთ არგუმენტს თუ რა უნდა გააკეთოს მონაცეემა
+// თუ გგამოვიდა true, ბოლოს კი ვხურავთ break არგუმენტით.
+// ამის შწმდეგ ვწერთ მეორე შემთხვევას:
+var comfirm = window.confirm("გსურთ თუ არა რომ switchმა იმუშაოს?")
+var number = false;
+
+if(comfirm == true){
+    switch(number){
+        case true:
+            window.alert("წარმატებით გაირეთ რეგისტრაცია");
+            break;
+        
+        case false:
+            window.alert("თქვენ ვერ შეძელით რეგისტრაცია");
+            break;
+    }
+}else if(comfirm == false){window.alert("თქვენ ვერ შეხვალთ საიტზე")}
+
+ 
+
+
+
+
